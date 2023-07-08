@@ -17,6 +17,7 @@ import com.squarecodec.socialapp.android.R
 import com.squarecodec.socialapp.android.common.theming.SmallElevation
 import com.squarecodec.socialapp.android.destinations.HomeDestination
 import com.squarecodec.socialapp.android.destinations.LoginDestination
+import com.squarecodec.socialapp.android.destinations.PostDetailDestination
 import com.squarecodec.socialapp.android.destinations.SignUpDestination
 
 @Composable
@@ -45,9 +46,9 @@ fun AppBar(
             },
             navigationIcon = if (isNavigationIconEnable(currentDestination?.route)) {
                 {
-                    IconButton(onClick = { /*TODO*/ }) {
+                    IconButton(onClick = { navHostController.navigateUp() }) {
                         Icon(
-                            painter = painterResource(id = R.drawable.person_circle_icon),
+                            painter = painterResource(id = R.drawable.round_arrow_back),
                             contentDescription = null
                         )
                     }
@@ -64,10 +65,15 @@ private fun appBarTitle(currentDestination: String?): Int {
         LoginDestination.route -> R.string.login_destination_title
         SignUpDestination.route -> R.string.signup_destination_title
         HomeDestination.route -> R.string.home_destination_title
+        PostDetailDestination.route -> R.string.post_detail_destination_title
         else -> R.string.empty_destination
     }
 }
 
 private fun isNavigationIconEnable(route: String?): Boolean {
-    return false
+    return !(
+            route == LoginDestination.route ||
+                    route == SignUpDestination.route ||
+                    route == HomeDestination.route
+            )
 }

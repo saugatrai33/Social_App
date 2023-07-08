@@ -13,4 +13,9 @@
     <string name="onboarding_title">Who to follow</string>
     <string name="onboarding_description">Post from people you follow will appear here. Here are some suggested people you can follow.</string>
     <string name="onboarding_done_button">Done</string>
+    <string name="post_detail_destination_title">Post Detail</string>
+    <string name="comments_header_label">Comments</string>
+    <string name="add_comment_btn_label">Add Comment</string>
+    <string name="loading_post_error">Error occured.</string>
+    <string name="retry_btn_label">Retry</string>
 </resources>

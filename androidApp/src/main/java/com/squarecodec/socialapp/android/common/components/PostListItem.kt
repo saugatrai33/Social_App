@@ -31,6 +31,7 @@ import coil.compose.AsyncImage
 import com.squarecodec.socialapp.android.R
 import com.squarecodec.socialapp.android.common.fake_data.Post
 import com.squarecodec.socialapp.android.common.theming.DarkGray
+import com.squarecodec.socialapp.android.common.theming.ExtraLargeSpacing
 import com.squarecodec.socialapp.android.common.theming.LargeSpacing
 import com.squarecodec.socialapp.android.common.theming.LightGray
 import com.squarecodec.socialapp.android.common.theming.MediumSpacing
@@ -49,9 +50,9 @@ fun PostListItem(
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .aspectRatio(ratio = 0.7f)
             .background(color = MaterialTheme.colors.surface)
             .clickable { onPostClick.invoke() }
+            .padding(all = ExtraLargeSpacing)
     ) {
         PostItemHeader(
             name = post.authorName,

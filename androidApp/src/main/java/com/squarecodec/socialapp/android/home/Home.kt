@@ -3,7 +3,7 @@ package com.squarecodec.socialapp.android.home
 import androidx.compose.runtime.Composable
 import com.ramcosta.composedestinations.annotation.Destination
 import com.ramcosta.composedestinations.navigation.DestinationsNavigator
-import com.squarecodec.socialapp.android.home.onboarding.OnBoardingUiState
+import com.squarecodec.socialapp.android.destinations.PostDetailDestination
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -16,11 +16,13 @@ fun Home(
     HomeScreen(
         onBoardingUiState = viewModel.onBoardingUiState,
         postsUiState = viewModel.postUiState,
-        onPostClick = {},
+        onPostClick = {
+            navigator.navigate(PostDetailDestination(it.id))
+        },
         onProfileClick = {},
         onLikeClick = { /*TODO*/ },
         onCommentClick = { /*TODO*/ },
-        onFollowButtonClick = {_,_ ->},
+        onFollowButtonClick = { _, _ -> },
         onBoardingFinish = { /*TODO*/ },
         fetchData = {
             viewModel.fetchData()
