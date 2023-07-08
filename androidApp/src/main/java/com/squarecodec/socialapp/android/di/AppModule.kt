@@ -7,6 +7,7 @@ import com.squarecodec.socialapp.android.auth.login.LoginViewModel
 import com.squarecodec.socialapp.android.auth.signup.SignUpViewModel
 import com.squarecodec.socialapp.android.common.datastore.UserSettingSerializer
 import com.squarecodec.socialapp.android.common.util.DATASTORE_FILENAME
+import com.squarecodec.socialapp.android.home.HomeScreenViewModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -15,6 +16,7 @@ private val appModule = module {
     viewModel { LoginViewModel(get(), get()) }
     viewModel { SignUpViewModel(get(), get()) }
     viewModel { MainViewModel(get()) }
+    viewModel { HomeScreenViewModel() }
 
     single {
         DataStoreFactory.create(

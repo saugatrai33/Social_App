@@ -54,7 +54,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.1")
     implementation("androidx.compose.foundation:foundation:1.4.1")
     implementation("androidx.compose.material:material:1.4.1")
-    implementation("androidx.activity:activity-compose:1.7.1")
+    implementation("androidx.activity:activity-compose:1.7.0")
 
     implementation("io.github.raamcosta.compose-destinations:core:1.8.38-beta")
     ksp("io.github.raamcosta.compose-destinations:ksp:1.8.38-beta")
@@ -68,4 +68,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.1")
 
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
+
+    implementation("io.coil-kt:coil-compose:2.4.0")
 }

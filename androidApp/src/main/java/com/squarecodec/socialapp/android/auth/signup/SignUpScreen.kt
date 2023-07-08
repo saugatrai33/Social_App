@@ -24,7 +24,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.KeyboardType
-import com.ramcosta.composedestinations.annotation.Destination
 import com.squarecodec.socialapp.android.R
 import com.squarecodec.socialapp.android.common.components.CustomBtn
 import com.squarecodec.socialapp.android.common.components.CustomTextField
